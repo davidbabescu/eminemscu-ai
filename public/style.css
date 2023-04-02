@@ -2,38 +2,21 @@
 /* Add a background color to the chat screen */
 body {
     font-family: 'Roboto', sans-serif;
-    background: #010141;
+    background: #120e07;
     background-size: cover;
     background-position: center center;
     font-smooth: antialiased;
-  }
-  
-  .logo-container
-  {
-    width: 100%;
     text-align: center;
   }
+  
 
-  .codingnexus {
-    color: #fff;
-    margin-top: 15px;
-    font-size: 12px;
-  }
-  .codingnexus a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  #loading {
-    font-size: 50px;
-  }
-
+  
   /* Style the chat box */
   .chat-box {
     margin: 0 auto;
-    width: 600px;
+    width: 50%;
     max-width: 100%;
-    background-color: #ffffff;
+    background-color: #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -41,14 +24,10 @@ body {
     height: calc(100vh - 250px);
   }
 
-  .codingnexus {
-    width: 100%;
-    text-align: center;
-  }
   
   /* Style the chat box header */
   .chat-box-header {
-    background-color: #0084ff;
+    background-color: #737577;
     color: #ffffff;
     padding: 16px;
     font-size: 20px;
@@ -68,8 +47,10 @@ body {
   .chat-box-body .message,
   .chat-box-body .response {
     margin-bottom: 16px;
-    padding: 8px 16px;
+    padding: 8px 110px;
     border-radius: 8px;
+    white-space: pre;
+    text-align: center;
   }
   
   /* Style the user's messages */
@@ -80,9 +61,9 @@ body {
   
   /* Style the chatbot's responses */
   .chat-box-body .response {
-    background-color: #0084ff;
+    background-color:#737577;;
     color: #ffffff;
-    text-align: right;
+    text-align: center;
   }
   
   /* Style the chat box footer */
@@ -109,7 +90,7 @@ body {
   .chat-box-footer button {
     margin-left: 8px;
     padding: 8px 16px;
-    background-color: #0084ff;
+    background-color: #737577;
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
@@ -120,10 +101,22 @@ body {
   
   /* Add some hover effects to the button */
   .chat-box-footer button:hover {
-    background-color: #0073e6;
+    background-color: #737577;
   }
   
   .chat-box-footer button:active {
-    background-color: #005bbf;
+    background-color: #737577;
   }
+  
+  /*.showcase .form-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #ccc;
+  }*/
+ 
+
   

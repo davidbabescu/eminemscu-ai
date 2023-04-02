@@ -21,9 +21,13 @@ app.get('/', function(req, res) {
 
 app.post('/message', (req, res) => {
     console.log('post message', req.body.prompt);
+    const poemSubject = req.body.prompt
+    const poemType = req.body.poemType
+    const prompt =   'write me a ' + poemType + ' poem about ' +  poemSubject
+    console.log( prompt );
     const response = openai.createCompletion({
         model: 'text-davinci-003',
-        prompt: 'write me a poem about' + req.body.prompt,
+        prompt: prompt,
         temperature: 0,
         top_p: 1,
         frequency_penalty: 0,

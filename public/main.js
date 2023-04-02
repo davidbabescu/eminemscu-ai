@@ -1,5 +1,6 @@
 const chatBox = document.querySelector(".chat-box");
 const inputField = chatBox.querySelector("input[type='text']");
+const poemTypeSelect = document.querySelector("select[id='poemType']");
 const button = chatBox.querySelector("button");
 console.log('ok', button);
 const chatBoxBody = chatBox.querySelector(".chat-box-body");
@@ -15,6 +16,7 @@ inputField.addEventListener("keypress", function(event) {
 function sendMessage() {
   console.log('send message');
    const message = inputField.value;
+   const poemType = poemTypeSelect.value
   // inputField.value = "";
   // chatBoxBody.innerHTML += `<div class="message"><p>${message}</p></div>`;
   // chatBoxBody.innerHTML += `<div id="loading" class="response loading">.</div>`;
@@ -39,7 +41,7 @@ function sendMessage() {
       accept: 'application.json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({prompt: message})
+    body: JSON.stringify({prompt: message, poemType: poemType})
   }).then(response => {
     return response.json();
   }).then(data => {
