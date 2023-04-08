@@ -23,7 +23,8 @@ app.post('/message', (req, res) => {
     console.log('post message', req.body.prompt);
     const poemSubject = req.body.prompt
     const poemType = req.body.poemType
-    const prompt =   'write me a ' + poemType + ' poem about ' +  poemSubject
+    const poemLang = req.body.poemLang
+    const prompt =   'write me a ' + poemType + ' poem in' + poemLang + ' about ' +  poemSubject
     console.log( prompt );
     const response = openai.createCompletion({
         model: 'text-davinci-003',
@@ -45,7 +46,9 @@ app.post('/message', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+let port = process.env.PORT || 3000 
+
+app.listen(port, () => {
     console.log('Started on port 3000');
 });
   
